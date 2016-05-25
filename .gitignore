@@ -1,0 +1,16 @@
+# Idea files
+.idea/
+
+# Cache files
+Thumbs.db
+
+# Node modules
+node_modules
+
+# Build/Target Files
+build/
+dist/
+
+# If build in main folder
+# Objects/
+# Document/
