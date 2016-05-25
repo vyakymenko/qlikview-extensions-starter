@@ -7,6 +7,6 @@ let gulp = require('./gulp')([
 ]);
 
 gulp.task('build',['const', 'js-prod', 'css-minify']);
-gulp.task('dev', ['const', 'hs-dev', 'css-minify']);
+gulp.task('dev', ['const', 'js-dev', 'css-minify']);
 
 gulp.task('default', ['dev', 'watch']);

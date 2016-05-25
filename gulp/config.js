@@ -4,7 +4,7 @@
  * {Configuration file for tasks}
  */
 module.exports = {
-	source: {
+	src: {
 		main: 'source/',
 		js: [
 		/**
