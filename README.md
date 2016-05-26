@@ -5,14 +5,14 @@
 
 ### Tech
 
-Qvet uses a number of open source projects to work properly:
+QlikView Extensions Developer Starter Pack ES6 uses a number of open source projects to work properly:
 
 * [node.js] - evented I/O for the backend
 * [Gulp] - the streaming build system
 * [Browserify] - awesome bundler
 
 ### Installation
-Clone the repo and write this commands in your command line:
+Clone the repo and write this command in your command line:
 
 ```sh
 $ npm i
