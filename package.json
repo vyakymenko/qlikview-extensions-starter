@@ -1,6 +1,6 @@
 {
   "name": "qlikview-extensions-developer-starter-pack-es6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QlikView Extensions Developer Starter Pack ES6",
   "browserify": {
     "transform": [
