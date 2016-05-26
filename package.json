@@ -2,6 +2,18 @@
   "name": "qlikview-extensions-developer-starter-pack-es6",
   "version": "1.0.0",
   "description": "QlikView Extensions Developer Starter Pack ES6",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
   "main": "gulpfile.js",
   "dependencies": {
     "babel-preset-es2015": "^6.9.0",

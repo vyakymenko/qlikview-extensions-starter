@@ -14,7 +14,7 @@ let gulp = require('gulp'),
 module.exports = () => {
 
 	let tasks = conf.src.js.map(entry => {
-		browserify({
+		return browserify({
 			entries: [conf.src.main+entry],
 			extensions: ['.js', '.json', '.es6']
 		})
@@ -28,5 +28,5 @@ module.exports = () => {
 			.pipe(gulp.dest(''));
 	});
 
-	es.merge.apply(null, tasks);
+	return es.merge.apply(null, tasks);
 };

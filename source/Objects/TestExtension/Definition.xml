@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionObject Label="TestExtension" Description="TestExtension">
+	<Text Label="API URL" Type="text"/>
+	<Initiate Name="Chart.Text.0.Content" Value="http://your-api.com/" />
+</ExtensionObject>
