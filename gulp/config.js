@@ -6,15 +6,15 @@
 module.exports = {
 	src: {
 		main: 'source/',
-		js: [
+		extensions: [
 		/**
 		 * Document Extensions
 		 */
-			'Document/TestExtension/Script.js',
+			'Document/TestExtension',
 		/**
 		 * Object Extensions
 		 */
-			'Objects/TestExtension/Script.js'
+			'Objects/TestExtension'
 		],
 		jswatch: [
 			'source/**/*.js',
@@ -44,5 +44,8 @@ module.exports = {
 	},
 	dist: {
 		main: 'dist/'
+	},
+	installers: {
+		main: 'dist-installers/'
 	}
 };

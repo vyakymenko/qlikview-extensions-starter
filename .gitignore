@@ -10,6 +10,7 @@ node_modules
 # Build/Target Files
 build/
 dist/
+dist-installers/
 
 # If build in main folder
 # Objects/

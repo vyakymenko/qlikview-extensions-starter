@@ -1,7 +1,7 @@
 #  QlikView Extensions Developer Starter Pack ES6
 
 ### Version
-1.0.1
+1.0.2
 
 ### Tech
 
@@ -31,6 +31,8 @@ Build Mode
 ```sh
 $ gulp build
 ```
+
+> In build mode, you will generate QAR installers to for distributing easily your extensions.
 
 ## Examples
 
@@ -128,10 +130,6 @@ $ gulp build
     	`);
     };
 ```
-
-### Todos
-
- - Add packer to qar for distribution.
 
 ### Enjoy!
 

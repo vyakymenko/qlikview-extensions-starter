@@ -11,16 +11,16 @@ let gulp = require('gulp'),
 
 module.exports = () => {
 
-	let tasks = conf.src.js.map(entry => {
+	let tasks = conf.src.extensions.map(entry => {
 		return browserify({
 			debug: true,
-			entries: [conf.src.main+entry],
+			entries: [conf.src.main+entry+'/Script.js'],
 			extensions: ['.js', '.json', '.es6']
 		})
 			.transform(babelify)
 			.bundle()
 			.on('error', gutil.log)
-			.pipe(source(conf.dist.main+entry))
+			.pipe(source(conf.dist.main+entry+'/Script.js'))
 			.pipe(gulp.dest(''));
 	});
 
