@@ -96,7 +96,7 @@ $ gulp build
 ### Document Extension
 
 ```javascript
-    // Script.js
+    // source/Document/TestExtension/Script.js
     import {Log} from '../../_api/Lambda';
     
     /**
@@ -116,7 +116,7 @@ $ gulp build
 ```
 
 ```javascript
-    // Lambda.js
+    // source/_api/Lambda.js
     /**
      * Log {function}
      *
@@ -130,7 +130,7 @@ $ gulp build
 ### Object Extension
 
 ```javascript
-   // Script.js
+   // source/Objects/TestExtension/Script.js
    /**
     * Extension Path
     * @type {string}
@@ -150,7 +150,7 @@ $ gulp build
 ```
 
 ```javascript
-    // Loader.js
+    // source/Objects/TestExtension/services/Loader.js
     /**
      * Import Something
      */
