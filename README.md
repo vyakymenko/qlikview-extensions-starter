@@ -32,7 +32,7 @@ Build Mode
 $ gulp build
 ```
 
-> In build mode, you will generate QAR installers to for distributing easily your extensions.
+> In build mode, you will generate QAR installers for distributing easily your extensions.
 
 ## Examples
 
