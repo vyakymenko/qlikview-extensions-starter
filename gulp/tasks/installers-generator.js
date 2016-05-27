@@ -8,7 +8,6 @@ let gulp = require('gulp'),
 
 module.exports = () => {
 	conf.src.extensions.map(entry => {
-		console.log(conf.dist.main+entry);
 		gulp.src(conf.dist.main+entry)
 			.pipe(zip(entry))
 			.pipe(rename(entry+'.qar'))

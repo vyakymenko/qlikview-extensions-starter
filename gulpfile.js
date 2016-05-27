@@ -9,8 +9,6 @@ let gulp = require('./gulp')([
 
 let sequence = require('run-sequence');
 
-gulp.task('inst', ['installer-generator']);
-
 gulp.task('build', () => {
 	sequence(
 		'const',
