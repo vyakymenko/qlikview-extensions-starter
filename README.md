@@ -1,5 +1,7 @@
 #  QlikView Extensions Developer Starter Pack ES6
 
+[![Join the chat at https://gitter.im/vyakymenko/qlikview-extensions-developer-starter-pack-es6](https://badges.gitter.im/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg)](https://gitter.im/vyakymenko/qlikview-extensions-developer-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### Version
 1.0.2
 
