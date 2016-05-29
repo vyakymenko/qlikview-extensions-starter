@@ -3,14 +3,12 @@
  */
 let gulp = require('gulp'),
 	conf = require('../config'),
-	zip = require('gulp-zip'),
-	rename = require('gulp-rename');
+	qar = require('gulp-qar');
 
 module.exports = () => {
 	conf.src.extensions.map(entry => {
 		gulp.src(conf.dist.main+entry)
-			.pipe(zip(entry))
-			.pipe(rename(entry+'.qar'))
+			.pipe(qar(entry))
 			.pipe(gulp.dest(conf.installers.main));
 	});
 };
