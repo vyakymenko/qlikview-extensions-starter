@@ -1,6 +1,6 @@
 {
   "name": "qlikview-extensions-developer-starter-pack-es6",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "QlikView Extensions Developer Starter Pack ES6",
   "browserify": {
     "transform": [
@@ -23,7 +23,7 @@
     "event-stream": "^3.3.2",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
-    "gulp-qar": "^1.0.0",
+    "gulp-qar": "^1.0.2",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",

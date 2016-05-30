@@ -17,3 +17,4 @@ gulp.task('build', () => {
 		'installers-generator')
 });
 gulp.task('dev', ['const', 'js-dev', 'css-minify']);
+gulp.task('default', ['dev']);
