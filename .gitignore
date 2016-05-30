@@ -1,9 +1,6 @@
 # Idea files
 .idea/
 
-# Cache files
-Thumbs.db
-
 # Node modules
 node_modules
 
@@ -11,7 +8,3 @@ node_modules
 build/
 dist/
 dist-installers/
-
-# If build in main folder
-# Objects/
-# Document/
