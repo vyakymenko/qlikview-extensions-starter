@@ -1,6 +1,5 @@
 #  QlikView Extensions Developer Starter Pack ES6
 
-[![Join to the chat](https://badges.gitter.im/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg)](https://gitter.im/vyakymenko/qlikview-extensions-developer-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6)
