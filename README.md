@@ -1,5 +1,6 @@
 #  QlikView Extensions Developer Starter Pack ES6
 
+
 [![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6)
@@ -7,7 +8,7 @@
 
 
 ### Version
-1.0.3
+1.0.4
 
 ### Tech
 
@@ -16,6 +17,7 @@ QlikView Extensions Developer Starter Pack ES6 uses a number of open source proj
 * [node.js] - evented I/O for the backend
 * [Gulp] - the streaming build system
 * [Browserify] - awesome bundler
+* [Nightwatch] - e2e testing
 
 ### Installation
 Clone the repo and write this command in your command line:
@@ -96,6 +98,18 @@ $ gulp build
 ```
 
 > In build mode, you will generate QAR installers for distributing easily your extensions.
+
+E2E Testing:
+_Note: Java, Selenium is a must! WebDrivers is optional, by default it will use Firefox Driver._
+
+
+More details for E2E tests API is here:
+http://nightwatchjs.org/api
+
+```sh
+$ node nigtwatch.js
+```
+
 
 ## Examples
 
@@ -208,3 +222,4 @@ MIT
    [node.js]: <https://nodejs.org>
    [Gulp]: <http://gulpjs.com>
    [Browserify]: <http://browserify.org/>
+   [Nightwatch]: <http://nightwatchjs.org>
