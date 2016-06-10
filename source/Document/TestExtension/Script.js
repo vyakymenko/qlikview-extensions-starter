@@ -1,4 +1,4 @@
-import {Log} from '../../_api/Lambda';
+import {Log} from '../../API/Lambda';
 
 /**
  * Init extension.

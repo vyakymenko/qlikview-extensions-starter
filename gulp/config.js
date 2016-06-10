@@ -1,7 +1,7 @@
 /**
  * Project Configuration
  *
- * {Configuration file for tasks}
+ * @path: gulp/config.js
  */
 module.exports = {
 	src: {

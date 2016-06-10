@@ -1,6 +1,6 @@
 {
-  "name": "qlikview-extensions-developer-starter-pack-es6",
-  "version": "1.0.4",
+  "name": "qlikview-extensions-starter-pack-es6",
+  "version": "1.0.5",
   "description": "QlikView Extensions Developer Starter Pack ES6",
   "browserify": {
     "transform": [
@@ -26,6 +26,7 @@
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-qar": "^1.0.3",
+    "gulp-sass": "^2.3.1",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
@@ -37,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vyakymenko/qlikview-extensions-developer-starter-pack-es6.git"
+    "url": "git+https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git"
   },
   "keywords": [
     "qlikview",
@@ -50,7 +51,7 @@
   "author": "Valentyn Yakymenko <rayfesoul@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vyakymenko/qlikview-extensions-developer-starter-pack-es6/issues"
+    "url": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git/issues"
   },
-  "homepage": "https://github.com/vyakymenko/qlikview-extensions-developer-starter-pack-es6#readme"
+  "homepage": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git#readme"
 }
