@@ -124,15 +124,18 @@ _You can feel free to change and updated them as you want._
 _QlikView can be tested only with E2E tests so we need to use them!_
 
 E2E Testing:
+
 _Note: Java, Selenium is a must! WebDrivers is optional, by default it will use Firefox Driver._
 
 More details for E2E tests API is here:
+
 http://nightwatchjs.org/api
 
 Before start we need to install some components:
-1. [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-2. [Selenium Server / selenium-server-standalone-{VERSION}.jar ](http://selenium-release.storage.googleapis.com/index.html)
-3. Configure your `nightwatch.json` file.
+
+ - [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+ - [Selenium Server / selenium-server-standalone-{VERSION}.jar ](http://selenium-release.storage.googleapis.com/index.html)
+ - Configure your `nightwatch.json` file.
 
 ```sh
 # For Windows
