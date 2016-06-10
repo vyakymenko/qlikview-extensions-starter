@@ -4,13 +4,13 @@
 [![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![Build status](https://ci.appveyor.com/api/projects/status/574hck58qxf5ftmw?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6)
-[![devDependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-developer-starter-pack-es6/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6#info=devDependencies)
+[![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6)
+[![devDependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6#info=devDependencies)
 
 QlikView Extensions Developer Starter Pack ES6 provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-1.0.5
+1.0.6
 
 # Tech
 
