@@ -10,7 +10,7 @@
 QlikView Extensions Developer Starter Pack ES6 provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-1.0.6
+1.1.0
 
 # Tech
 
@@ -201,13 +201,14 @@ $ nightwatch tests
 ```
 
 # In Development
+ - Add clean build task.
  - Add SASS Support.
  - Add example with SASS/CSS.
  - Add Documentation.
  - Add Changelog.
  
 # License
----
+
 MIT
 
    [Gulp]: <http://gulpjs.com>
