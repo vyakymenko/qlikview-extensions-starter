@@ -10,7 +10,7 @@
 QlikView Extensions Developer Starter Pack ES6 provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-1.1.0
+1.1.1
 
 # Tech
 
@@ -69,26 +69,26 @@ _You can feel free to change and updated them as you want._
      */
     module.exports = {
     	src: {
-    		main: 'source/', // <--- Main Directory with extensions source files.
-    		extensions: [ // <-- Array of extensions Folders.
-    		/**
-    		 * Document Extensions
-    		 */
-    			'Document/TestExtension', // <--- Add here each new Document Extension Folder.
-    		/**
-    		 * Object Extensions
-    		 */
-    			'Objects/TestExtension' // <--- Add here each new Object Extension Folder.
-     		],
-    		jswatch: [ // <--- Used for watching changes in source files.
+    		main: 'source/',
+    		extensions: [
+    			/**
+    			 * Document Extensions.
+    			 */
+    			'Document/TestExtension',
+    			/**
+    			 * Object Extensions.
+    			 */
+    			'Objects/TestExtension'
+    		],
+    		js: [
     			'source/**/*.js',
     			'source/*.js'
     		],
-    		css: [ // <--- 
-    			'source/**/*.css',
-    			'source/*.css'
+    		sass: [
+    			'source/**/*.scss',
+    			'source/*.scss'
     		],
-    		constfiles: [ // <-- Constant files used for extensions.
+    		assets: [
     			'source/*.gif',
     			'source/**/*.gif',
     			'source/*.png',
@@ -103,19 +103,18 @@ _You can feel free to change and updated them as you want._
     			'source/*.txt',
     			'source/libs/*.js',
     			'source/**/libs/*.js',
-    			'source/**/libs/**/*.js'
+    			'source/**/libs/**/*.js',
+    			'source/**/*.css',
+    			'source/*.css'
     		]
     	},
     	dist: {
-    		main: 'dist/' // <-- Distribution folder.
-    	},
-    	installers: {
-    		main: 'dist-installers/' // <-- Installers distribution folder.
+    		dev: 'dist/dev/',
+    		prod: 'dist/prod/',
+    		installers: 'dist/prod/installers'
     	}
     };
 ```
-
-
 
 > In build mode, you will generate QAR installers for distributing easily your extensions.
 
@@ -178,18 +177,23 @@ $ nightwatch tests
 │            ├── services
 │            │   └── Loader.js
 │            ├── Definition.xml
+│            ├── extensions.scss
 │            ├── icon.png
 │            └── Script.js
 ├── tests                      <- e2e test cases
 │   └── TestDocument.js
 ├── gulp                       <- gulp dir 
 │   └── tasks                       <- gulp tasks
-│   │   ├── const.js
-│   │   ├── css-minify.js
-│   │   ├── installers-generator.js
-│   │   ├── js-dev.js
-│   │   ├── js-prod.js
-│   │   └── watch.js
+│   │   ├── assets.copy.dev.js
+│   │   ├── assets.copy.prod.js
+│   │   ├── clean.dev.js           <- in development.
+│   │   ├── clean.prod.js          <- in development.
+│   │   ├── installers.prod.js
+│   │   ├── js.build.dev.js
+│   │   ├── js.build.prod.js
+│   │   ├── sass.dev.js
+│   │   ├── sass.prod.js
+│   │   └── watch.dev.js
 │   ├── config.js                   <- Extensions development configuration file
 │   └── index.js
 ├── .editorconfig              <- editor configuration
@@ -202,8 +206,6 @@ $ nightwatch tests
 
 # In Development
  - Add clean build task.
- - Add SASS Support.
- - Add example with SASS/CSS.
  - Add Documentation.
  - Add Changelog.
  

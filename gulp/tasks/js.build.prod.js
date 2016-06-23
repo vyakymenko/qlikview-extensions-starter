@@ -1,15 +1,16 @@
 /**
- * ES6 JavaScript Compiling Task {Production}
+ * ES6 JavaScript Compiling {Production}
+ * @task js.build.prod
  */
 let gulp = require('gulp'),
 	browserify = require('browserify'),
 	babelify = require('babelify'),
 	source = require('vinyl-source-stream'),
-	gutil = require('gulp-util'),
+	util = require('gulp-util'),
 	uglify = require('gulp-uglify'),
 	streamify = require('gulp-streamify'),
-	conf = require('../config'),
-	es = require('event-stream');
+	es = require('event-stream'),
+	conf = require('../config');
 
 module.exports = () => {
 
@@ -20,8 +21,8 @@ module.exports = () => {
 		})
 			.transform(babelify)
 			.bundle()
-			.on('error', gutil.log)
-			.pipe(source(conf.dist.main+entry+'/Script.js'))
+			.on('error', util.log)
+			.pipe(source(conf.dist.prod+entry+'/Script.js'))
 			.pipe(streamify(uglify({
 				preserveComments: "license"
 			})))

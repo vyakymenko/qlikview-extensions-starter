@@ -1,20 +1,40 @@
 let gulp = require('./gulp')([
-	'js-dev',
-	'js-prod',
-	'css-minify',
-	'const',
-	'installers-generator',
-	'watch'
+	'clean.dev',
+	'assets.copy.dev',
+	'js.build.dev',
+	'sass.dev',
+	'watch.dev',
+	'clean.prod',
+	'assets.copy.prod',
+	'js.build.prod',
+	'sass.prod',
+	'installers.prod'
 ]);
 
-let sequence = require('run-sequence');
+let runSequence = require('run-sequence');
 
-gulp.task('build', () => {
-	sequence(
-		'const',
-		'js-prod',
-		'css-minify',
-		'installers-generator')
+//----------
+// Development.
+gulp.task('dev', () => {
+	runSequence(
+		// 'clean.dev',
+		'assets.copy.dev',
+		'js.build.dev',
+		'sass.dev',
+		'watch.dev')
 });
-gulp.task('dev', ['const', 'js-dev', 'css-minify', 'watch']);
+
+//----------
+// Production build.
+gulp.task('build', () => {
+	runSequence(
+		// 'clean.prod',
+		'assets.copy.prod',
+		'js.build.prod',
+		'sass.prod',
+		'installers.prod')
+});
+
+//----------
+// Default development.
 gulp.task('default', ['dev']);

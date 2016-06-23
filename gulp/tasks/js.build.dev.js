@@ -1,13 +1,14 @@
 /**
- * ES6 JavaScript Compiling Task {Development}
+ * ES6 JavaScript Compiling {Development}
+ * @task js.build.dev
  */
 let gulp = require('gulp'),
 	browserify = require('browserify'),
 	babelify = require('babelify'),
 	source = require('vinyl-source-stream'),
-	gutil = require('gulp-util'),
-	conf = require('../config'),
-	es = require('event-stream');
+	util = require('gulp-util'),
+	es = require('event-stream'),
+	conf = require('../config');
 
 module.exports = () => {
 
@@ -19,8 +20,8 @@ module.exports = () => {
 		})
 			.transform(babelify)
 			.bundle()
-			.on('error', gutil.log)
-			.pipe(source(conf.dist.main+entry+'/Script.js'))
+			.on('error', util.log)
+			.pipe(source(conf.dist.dev+entry+'/Script.js'))
 			.pipe(gulp.dest(''));
 	});
 
