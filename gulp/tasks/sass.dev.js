@@ -1,17 +1,16 @@
 /**
- * SASS Compiling Task {Development}
+ * SASS compiling {Development}
+ * @task sass.dev
  */
 let gulp = require('gulp'),
-	conf = require('../config'),
+	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
-	sass = require('gulp-sass');
+	conf = require('../config');
 
 module.exports = () => {
-	conf.src.extensions.map(entry => {
-		gulp.src(conf.src.main+entry+'/*.scss')
-			.pipe(sourcemaps.init())
-			.pipe(sass())
-			.pipe(sourcemaps.write())
-			.pipe(gulp.dest(conf.dist.main));
-	});
+	gulp.src(conf.src.sass)
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(conf.dist.dev));
 };

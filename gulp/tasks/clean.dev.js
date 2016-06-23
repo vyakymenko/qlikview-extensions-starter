@@ -1,13 +1,21 @@
 /**
  * Clean {Development}.
+ * @task clean.dev
  */
-let gulp = require('gulp'),
-	rimraf = require('rimraf'),
+let rimraf = require('rimraf'),
+	util = require('gulp-util'),
 	conf = require('../config');
 
 module.exports = () => {
-	gulp.src([
-		conf.dist.main,
-		conf.installers.main
-	])
+	return cb => {
+		let promise = new Promise(resolve => {
+			rimraf(conf.dist.dev, e => {
+				if (e) {
+					util.log('Clean task failed with', e);
+				}
+				resolve();
+			});
+		});
+		Promise.all([promise]).then(() => cb());
+	}
 };

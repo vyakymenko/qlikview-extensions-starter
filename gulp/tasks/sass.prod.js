@@ -1,14 +1,15 @@
 /**
- * SASS Compiling Task {Production}
+ * SASS compiling {Production}
+ * @task sass.prod
  */
 let gulp = require('gulp'),
-	conf = require('../config'),
-	sass = require('gulp-sass');
+	sass = require('gulp-sass'),
+	cssmin = require('gulp-cssmin'),
+	conf = require('../config');
 
 module.exports = () => {
-	conf.src.extensions.map(entry => {
-		gulp.src(conf.src.main+entry+'/*.scss')
-			.pipe(sass())
-			.pipe(gulp.dest(conf.dist.main));
-	});
+	gulp.src(conf.src.sass)
+		.pipe(sass())
+		.pipe(cssmin())
+		.pipe(gulp.dest(conf.dist.prod));
 };

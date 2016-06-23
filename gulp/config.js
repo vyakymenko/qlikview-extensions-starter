@@ -7,24 +7,24 @@ module.exports = {
 	src: {
 		main: 'source/',
 		extensions: [
-		/**
-		 * Document Extensions
-		 */
+			/**
+			 * Document Extensions.
+			 */
 			'Document/TestExtension',
-		/**
-		 * Object Extensions
-		 */
+			/**
+			 * Object Extensions.
+			 */
 			'Objects/TestExtension'
 		],
-		jswatch: [
+		js: [
 			'source/**/*.js',
 			'source/*.js'
 		],
-		css: [
-			'source/**/*.css',
-			'source/*.css'
+		sass: [
+			'source/**/*.scss',
+			'source/*.scss'
 		],
-		constfiles: [
+		assets: [
 			'source/*.gif',
 			'source/**/*.gif',
 			'source/*.png',
@@ -39,13 +39,14 @@ module.exports = {
 			'source/*.txt',
 			'source/libs/*.js',
 			'source/**/libs/*.js',
-			'source/**/libs/**/*.js'
+			'source/**/libs/**/*.js',
+			'source/**/*.css',
+			'source/*.css'
 		]
 	},
 	dist: {
-		main: 'dist/'
-	},
-	installers: {
-		main: 'dist-installers/'
+		dev: 'dist/dev/',
+		prod: 'dist/prod/',
+		installers: 'dist/prod/installers'
 	}
 };
