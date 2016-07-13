@@ -35,9 +35,6 @@
     "run-sequence": "^1.2.1",
     "vinyl-source-stream": "^1.1.0"
   },
-  "scripts": {
-    "preinstall": "npm install gulp browserify -g"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git"

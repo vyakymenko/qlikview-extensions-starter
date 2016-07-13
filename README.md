@@ -10,7 +10,7 @@
 QlikView Extensions Developer Starter Pack ES6 provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-1.1.1
+1.1.2
 
 # Tech
 
@@ -29,6 +29,10 @@ In order to start the qlikview-extensions-starter-pack-es6 use:
 ```bash
 $ git clone --depth 1 https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git
 $ cd qlikview-extensions-starter-pack-es6
+
+# install important global dependencies
+$ npm install gulp browserify -g
+
 # install the project's dependencies
 $ npm install
 
