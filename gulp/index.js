@@ -1,7 +1,7 @@
 /**
  * Task loader.
  */
-let gulp = require('gulp');
+const gulp = require('gulp');
 
 module.exports = (tasks) => {
 

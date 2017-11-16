@@ -2,10 +2,10 @@
  * SASS compiling {Development}
  * @task sass.dev
  */
-let gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps'),
-	conf = require('../config');
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      sourcemaps = require('gulp-sourcemaps'),
+      conf = require('../config');
 
 module.exports = () => {
 	gulp.src(conf.src.sass)

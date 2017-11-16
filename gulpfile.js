@@ -1,4 +1,4 @@
-let gulp = require('./gulp')([
+const gulp = require('./gulp')([
 	'clean.dev',
 	'assets.copy.dev',
 	'js.build.dev',
@@ -11,7 +11,7 @@ let gulp = require('./gulp')([
 	'installers.prod'
 ]);
 
-let runSequence = require('run-sequence');
+const runSequence = require('run-sequence');
 
 //----------
 // Development.

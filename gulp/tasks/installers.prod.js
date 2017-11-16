@@ -2,9 +2,9 @@
  * QAR installers generator {Production}
  * @task installers.prod
  */
-let gulp = require('gulp'),
-	qar = require('gulp-qar'),
-	conf = require('../config');
+const gulp = require('gulp'),
+      qar = require('gulp-qar'),
+      conf = require('../config');
 
 module.exports = () => {
 	conf.src.extensions.map(entry => {
