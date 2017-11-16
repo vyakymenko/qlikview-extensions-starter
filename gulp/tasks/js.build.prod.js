@@ -23,9 +23,7 @@ module.exports = () => {
 			.bundle()
 			.on('error', util.log)
 			.pipe(source(conf.dist.prod+entry+'/Script.js'))
-			.pipe(streamify(uglify({
-				preserveComments: "license"
-			})))
+			.pipe(streamify(uglify()))
 			.pipe(gulp.dest(''));
 	});
 
