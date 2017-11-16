@@ -1,5 +1,7 @@
 # Introduction
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://greenkeeper.io/)
+
 [![Gitter](https://badges.gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![Build status](https://ci.appveyor.com/api/projects/status/574hck58qxf5ftmw?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter-pack-es6)
