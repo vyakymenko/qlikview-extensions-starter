@@ -1,42 +1,5 @@
 # AppVeyor file
 # http://www.appveyor.com/docs/appveyor-yml
-
-# Build version format
-version: "{build}"
-
-# Test against this version of Node.js
-environment:
-  nodejs_version: "Stable"
-
-build: off
-
-clone_depth: 10
-
-# Fix line endings on Windows
-init:
-  - git config --global core.autocrlf true
-
-install:
-  - ps: Install-Product node $env:nodejs_version
-  - npm install -g npm
-  - ps: $env:path = $env:appdata + "\npm;" + $env:path
-  - npm install
-
-test_script:
-  # Output useful info for debugging.
-  - node --version && npm --version
-
-notifications:
-  - provider: Webhook
-    url: https://webhooks.gitter.im/e/52bad9d26ddab005cd8f
-    on_build_success: false
-    on_build_failure: true
-    on_build_status_changed: true
-
-cache: node_modules
-
-# AppVeyor file
-# http://www.appveyor.com/docs/appveyor-yml
 # This file: cloned from https://github.com/gruntjs/grunt/blob/master/appveyor.yml
 
 # Build version format
