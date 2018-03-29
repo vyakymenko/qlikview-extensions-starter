@@ -1,0 +1,11 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.2
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - nightwatch > mocha-nightwatch > debug:
+        patched: '2018-03-29T18:37:09.695Z'
+  'npm:ms:20170412':
+    - nightwatch > mocha-nightwatch > debug > ms:
+        patched: '2018-03-29T18:37:09.695Z'

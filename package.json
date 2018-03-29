@@ -16,7 +16,8 @@
   },
   "main": "gulpfile.js",
   "dependencies": {
-    "nightwatch": "^0.9.12"
+    "nightwatch": "^0.9.12",
+    "snyk": "^1.70.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -43,7 +44,9 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "qlikview",
@@ -58,5 +61,6 @@
   "bugs": {
     "url": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git/issues"
   },
-  "homepage": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git#readme"
+  "homepage": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git#readme",
+  "snyk": true
 }
