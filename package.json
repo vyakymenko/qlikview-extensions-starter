@@ -16,7 +16,7 @@
   },
   "main": "gulpfile.js",
   "dependencies": {
-    "nightwatch": "^0.9.12",
+    "nightwatch": "^1.0.1",
     "snyk": "^1.70.3"
   },
   "devDependencies": {
