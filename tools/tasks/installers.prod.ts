@@ -5,7 +5,7 @@
 import * as gulp from 'gulp';
 import { Config } from '../config';
 import { lstatSync, readdirSync } from 'fs';
-import { join } from "path";
+import { join } from 'path';
 
 const qar = require('gulp-qar');
 
