@@ -8,3 +8,7 @@ node_modules
 build/
 dist/
 dist-installers/
+
+.settings/
+
+.project

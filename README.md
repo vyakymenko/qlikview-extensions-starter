@@ -2,49 +2,40 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://greenkeeper.io/)
 
-[![Gitter](https://badges.gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6)
+[![Gitter](https://badges.gitter.im/vyakymenko/qlikview-extensions-starter.svg)](https://gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![Build status](https://ci.appveyor.com/api/projects/status/574hck58qxf5ftmw?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6)
 [![devDependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6#info=devDependencies)
 
-QlikView Extensions Developer Starter Pack ES6 provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
+QlikView Extensions Developer Starter provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-1.1.5
+2.0.0
 
 # Tech
 
-QlikView Extensions Developer Starter Pack ES6 uses a number of open source projects to work properly:
+QlikView Extensions Developer Starter uses a number of open source projects to work properly:
 
 * [Gulp] - the streaming build system
-* [Browserify] - awesome bundler
-* [Nightwatch] - e2e testing
 
 # How to start
 
-**Note** that this project requires node v4.x.x or higher and npm 2.14.7.
-
-In order to start the qlikview-extensions-starter-pack-es6 use:
+In order to start the qlikview-extensions-starter use:
 
 ```bash
-$ git clone --depth 1 https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git
-$ cd qlikview-extensions-starter-pack-es6
+$ git clone --depth 1 https://github.com/vyakymenko/qlikview-extensions-starter.git
+$ cd qlikview-extensions-starter
 
-# install important global dependencies
-$ npm install gulp browserify -g
-
-# install the project's dependencies
+# install dependencies
 $ npm install
 
 # develop and watches all your files
-$ gulp
-# or
-$ gulp dev
+$ npm run start
 
 # production build with installers
-$ gulp build
+$ npm run build
 ```
 
 # Table of Content
@@ -55,10 +46,8 @@ $ gulp build
 - [How to start](#how-to-start)
 - [Table of Content](#table-of-content)
 - [Configuration](#configuration)
-- [Running tests](#running-tests)
 - [Examples](#examples)
 - [Directory Structure](#directory-structure)
-- [In Development](#in-development)
 - [License](#license)
 
 # Configuration
@@ -68,94 +57,66 @@ Default gulp extensions development configuration file:
 _You can feel free to change and updated them as you want._
 
 ```javascript
-	/**
-     * Project Configuration
-     *
-     * @path: gulp/config.js
-     */
-    module.exports = {
-    	src: {
-    		main: 'source/',
-    		extensions: [
-    			/**
-    			 * Document Extensions.
-    			 */
-    			'Document/TestExtension',
-    			/**
-    			 * Object Extensions.
-    			 */
-    			'Objects/TestExtension'
-    		],
-    		js: [
-    			'source/**/*.js',
-    			'source/*.js'
-    		],
-    		sass: [
-    			'source/**/*.scss',
-    			'source/*.scss'
-    		],
-    		assets: [
-    			'source/*.gif',
-    			'source/**/*.gif',
-    			'source/*.png',
-    			'source/**/*.png',
-    			'source/*.jpg',
-    			'source/**/*.jpg',
-    			'source/**/*.xml',
-    			'source/*.xml',
-    			'source/**/*.qvpp',
-    			'source/*.qvpp',
-    			'source/**/*.txt',
-    			'source/*.txt',
-    			'source/libs/*.js',
-    			'source/**/libs/*.js',
-    			'source/**/libs/**/*.js',
-    			'source/**/*.css',
-    			'source/*.css'
-    		]
-    	},
-    	dist: {
-    		dev: 'dist/dev/',
-    		prod: 'dist/prod/',
-    		installers: 'dist/prod/installers'
-    	}
-    };
+/**
+ * Configuration
+ */
+export const Config: any = {
+  src: {
+    main: 'src/',
+    extensions: {
+      document: 'src/Document',
+      objects: 'src/Objects',
+    },
+    ts: [
+      'src/**/*.ts',
+      'src/*.ts'
+    ],
+    scss: [
+      'src/**/*.scss',
+      'src/*.scss'
+    ],
+    assets: [
+      'src/*.gif',
+      'src/**/*.gif',
+      'src/*.png',
+      'src/**/*.png',
+      'src/*.jpg',
+      'src/**/*.jpg',
+      'src/**/*.svg',
+      'src/**/*.wbl',
+      'src/*.wbl',
+      'src/**/*.xml',
+      'src/*.xml',
+      'src/**/*.qext',
+      'src/*.qext',
+      'src/**/*.txt',
+      'src/*.txt',
+      'src/**/*.json',
+      'src/*.json',
+      'src/lib/*.js',
+      'src/**/lib/*.js',
+      'src/**/lib/**/*.js',
+      'src/**/libs/*.js',
+      'src/**/libs/**/*.js',
+      'src/**/*.css',
+      'src/*.css'
+    ]
+  },
+  dist: {
+    dev: 'dist/dev/',
+    prod: 'dist/prod/',
+    installers: 'dist/prod/installers'
+  }
+};
 ```
 
 > In build mode, you will generate QAR installers for distributing easily your extensions.
 
-# Running tests
 
-_QlikView can be tested only with E2E tests so we need to use them!_
+# Examples
 
-E2E Testing:
-
-_Note: Java, Selenium is a must! WebDrivers is optional, by default it will use Firefox Driver._
-
-More details for E2E tests API is here:
-
-http://nightwatchjs.org/api
-
-Before start we need to install some components:
-
- - [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
- - [Selenium Server / selenium-server-standalone-{VERSION}.jar ](http://selenium-release.storage.googleapis.com/index.html)
- - Configure your `nightwatch.json` file.
-
-```sh
-# For Windows
-$ node nigtwatch.js
-
-# For Mac
-$ nightwatch tests
-
-# or you can read more details on how to use and configure your e2e tests here: http://nightwatchjs.org/guide
-```
-
-# Extensions Examples
-
-- https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6/tree/master/source/Document/TestExtension - Document Extension Example.
-- https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6/tree/master/source/Objects/TestExtension - Object Extension Example.
+- https://github.com/vyakymenko/qlikview-extensions-starter/tree/master/source/Document/DocExtension - Document Extension Example.
+- https://github.com/vyakymenko/qlikview-extensions-starter/tree/master/source/Objects/TestExtension - Object Extension Example.
 
 # Directory Structure
 
@@ -163,62 +124,56 @@ $ nightwatch tests
 .
 ├── LICENSE
 ├── README.md
-├── gulpfile.js                <- configuration of the gulp tasks
-├── nightwatch.json            <- e2e tests configuration
-├── nightwatch.js
-├── nightwatch.conf.js
-├── package.json               <- dependencies of the project\
-├── source                     <- source code of the extensions
-│   ├── API                         <- exporting API dir that can be imported in extensions
-│   │   └── Lambda.js
-│   ├── Document                    <- Document Extensions
-│   │   └── TestExtension
-│   │       ├── Definition.xml
-│   │       └── Script.js
-│   └── Objects                     <- Object Extensions
-│        └── TestExtension
-│            ├── libs
-│            │   ├── Definition.xml
-│            │   └── Qvet.min.js
-│            ├── services
-│            │   └── Loader.js
-│            ├── Definition.xml
-│            ├── extensions.scss
-│            ├── icon.png
-│            └── Script.js
-├── tests                      <- e2e test cases
-│   └── TestDocument.js
-├── gulp                       <- gulp dir 
-│   └── tasks                       <- gulp tasks
-│   │   ├── assets.copy.dev.js
-│   │   ├── assets.copy.prod.js
-│   │   ├── clean.dev.js           <- in development.
-│   │   ├── clean.prod.js          <- in development.
-│   │   ├── installers.prod.js
-│   │   ├── js.build.dev.js
-│   │   ├── js.build.prod.js
-│   │   ├── sass.dev.js
-│   │   ├── sass.prod.js
-│   │   └── watch.dev.js
-│   ├── config.js                   <- Extensions development configuration file
-│   └── index.js
-├── .editorconfig              <- editor configuration
-├── .gitignore                 <- git ignore
-├── .jshintrc                  <- jshint configuration
-├── .stylelintrc               <- stylelint configuration
-├── .travis.yml
-└── appveyor.yml
+├── appveyor.yml
+├── gulpfile.ts
+├── package-lock.json
+├── package.json
+├── src
+│   ├── API
+│   │   └── Lambda.ts
+│   ├── Document
+│   │   └── DocExtension
+│   │       ├── Definition.xml
+│   │       └── Script.ts
+│   └── Objects
+│       └── TestExtension
+│           ├── Definition.xml
+│           ├── Script.ts
+│           ├── extensions.scss
+│           ├── icon.png
+│           ├── libs
+│           │   ├── Definition.xml
+│           │   └── Qvet.min.js
+│           └── services
+│               └── Loader.ts
+├── tools
+│   ├── config.ts
+│   ├── manual_types
+│   │   └── qlikview.d.ts
+│   ├── tasks
+│   │   ├── assets.copy.dev.ts
+│   │   ├── assets.copy.prod.ts
+│   │   ├── clean.dev.ts
+│   │   ├── clean.prod.ts
+│   │   ├── installers.prod.ts
+│   │   ├── noop.ts
+│   │   ├── scss.dev.ts
+│   │   ├── scss.prod.ts
+│   │   ├── ts.build.dev.ts
+│   │   ├── ts.build.prod.ts
+│   │   ├── tslint.ts
+│   │   └── watch.dev.ts
+│   ├── tasks.json
+│   └── utils
+│       ├── code_change_tools.ts
+│       ├── task.ts
+│       └── tasks_tools.ts
+├── tsconfig.json
+└── tslint.json
 ```
 
-# In Development
- - Add clean build task.
- - Add Documentation.
- - Add Changelog.
- 
 # License
 
 MIT
 
    [Gulp]: <http://gulpjs.com>
-   [Browserify]: <http://browserify.org/>
-   [Nightwatch]: <http://nightwatchjs.org>

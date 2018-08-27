@@ -1,66 +1,53 @@
 {
-  "name": "qlikview-extensions-starter-pack-es6",
-  "version": "1.1.5",
-  "description": "QlikView Extensions Developer Starter Pack ES6",
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
-  },
-  "main": "gulpfile.js",
-  "dependencies": {
-    "nightwatch": "^1.0.1",
-    "snyk": "^1.70.3"
-  },
+  "name": "qlikview-extensions-starter-pack",
+  "version": "2.0.0",
+  "description": "QlikView Extensions Developer Starter",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.9.0",
-    "babelify": "^8.0.0",
-    "browserify": "16.2.1",
+    "@types/del": "^3.0.1",
+    "@types/event-stream": "^3.3.34",
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-sass": "0.0.31",
+    "@types/gulp-sourcemaps": "0.0.32",
+    "@types/jquery": "^3.3.6",
+    "@types/node": "^10.7.1",
+    "@types/run-sequence": "0.0.30",
+    "del": "^3.0.0",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-qar": "^1.0.4",
-    "gulp-sass": "4.0.1",
-    "gulp-sourcemaps": "2.6.4",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "rimraf": "^2.5.4",
-    "run-sequence": "^2.2.0",
-    "vinyl-source-stream": "^2.0.0"
+    "gulp-qar": "^1.0.5",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tslint": "^8.1.3",
+    "isstream": "^0.1.2",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "tildify": "^1.2.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git"
+    "url": "git+https://github.com/vyakymenko/qlikview-extensions-starter.git"
   },
   "scripts": {
+    "gulp": "gulp",
     "start": "gulp dev",
-    "build": "gulp build",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "build": "gulp build"
   },
   "keywords": [
     "qlikview",
     "extensions",
     "javascript",
     "gulp",
-    "es6",
-    "browserify"
+    "rollup",
+    "typescript"
   ],
-  "author": "Valentyn Yakymenko <rayfesoul@gmail.com>",
+  "author": "Valentyn Yakymenko <vyakymenko>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git/issues"
-  },
-  "homepage": "https://github.com/vyakymenko/qlikview-extensions-starter-pack-es6.git#readme",
-  "snyk": true
+  "dependencies": {}
 }
