@@ -1,24 +1,16 @@
 # Introduction
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/qlikview-extensions-starter.svg)](https://greenkeeper.io/)
 
-[![Gitter](https://badges.gitter.im/vyakymenko/qlikview-extensions-starter.svg)](https://gitter.im/vyakymenko/qlikview-extensions-starter-pack-es6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter-pack-es6)
-[![Build status](https://ci.appveyor.com/api/projects/status/574hck58qxf5ftmw?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter-pack-es6)
+[![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter)
+[![Build status](https://ci.appveyor.com/api/projects/status/scyi6yaqm085yyj6?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6)
-[![devDependency Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter-pack-es6#info=devDependencies)
+[![devDependencies Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter?type=dev)
 
 QlikView Extensions Developer Starter provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
 2.0.0
-
-# Tech
-
-QlikView Extensions Developer Starter uses a number of open source projects to work properly:
-
-* [Gulp] - the streaming build system
 
 # How to start
 
@@ -175,5 +167,3 @@ export const Config: any = {
 # License
 
 MIT
-
-   [Gulp]: <http://gulpjs.com>
