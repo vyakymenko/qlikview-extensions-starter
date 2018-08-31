@@ -1,6 +1,6 @@
 /**
  * TypeScript Compiling {Development}
- * @task js.build.dev
+ * @task ts.build.dev
  */
 import { lstatSync, readdirSync } from 'fs';
 import { join } from 'path';

@@ -1,6 +1,6 @@
 /**
- * ES6 JavaScript Compiling {Production}
- * @task js.build.prod
+ * TypeScript Compiling {Development}
+ * @task ts.build.prod
  */
 import { lstatSync, readdirSync } from 'fs';
 import { join } from 'path';
@@ -9,7 +9,7 @@ import * as es from 'event-stream';
 import { Config } from '../config';
 
 const typescript = require('rollup-plugin-typescript');
-const uglify = require('rollup-plugin-uglify');
+const terser = require('rollup-plugin-terser').terser;
 const tsconfig = require('../../tsconfig.json');
 
 export = () => {
@@ -40,7 +40,7 @@ export = () => {
               tsconfig: tsconfig
             }
           ),
-          uglify()
+          terser()
         ]
       })
         .then((bundle: any) => {
