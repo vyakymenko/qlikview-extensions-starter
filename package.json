@@ -5,7 +5,7 @@
   "devDependencies": {
     "@types/del": "^3.0.1",
     "@types/event-stream": "^3.3.34",
-    "@types/gulp": "^4.0.5",
+    "@types/gulp": "4.0.5",
     "@types/gulp-sass": "0.0.31",
     "@types/gulp-sourcemaps": "0.0.32",
     "@types/jquery": "^3.3.6",
