@@ -10,9 +10,9 @@ export = () => {
   gulp.watch(Config.src.ts,
     gulp.series(['ts.build.dev']));
 
-	gulp.watch(Config.src.assets,
+  gulp.watch(Config.src.assets,
     gulp.series(['assets.copy.dev']));
 
-	gulp.watch(Config.src.scss,
+  gulp.watch(Config.src.scss,
     gulp.series(['scss.dev']));
 };
