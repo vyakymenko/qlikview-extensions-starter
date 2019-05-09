@@ -9,9 +9,8 @@ import * as es from 'event-stream';
 import { Config } from '../config';
 
 const typescript = require('rollup-plugin-typescript');
-const tsconfig = require('../../tsconfig.json');
 
-export = () => {
+export = (done: any) => {
 
   const isDirectory = (source: any) => lstatSync(source).isDirectory();
   const getDirectories = (source: any) =>
@@ -35,16 +34,18 @@ export = () => {
         plugins: [
           typescript({
             typescript: require('typescript'),
-            tsconfig: tsconfig
+            tsconfig: '../../'
           })
         ]
       })
         .then((bundle: any) => {
-          return bundle.write({
+          bundle.write({
             file: `${Config.dist.dev}${path.split('src/')[1]}/Script.js`,
             format: 'iife'
           });
-        })
+
+          return done();
+        });
     });
 
   return es.merge.apply(tasks);

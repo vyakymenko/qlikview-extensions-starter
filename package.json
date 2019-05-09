@@ -1,6 +1,6 @@
 {
   "name": "qlikview-extensions-starter-pack",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "QlikView Extensions Developer Starter",
   "devDependencies": {
     "@types/del": "^4.0.0",
