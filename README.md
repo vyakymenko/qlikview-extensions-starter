@@ -147,7 +147,6 @@ export const Config: any = {
 │   │   ├── assets.copy.prod.ts
 │   │   ├── clean.dev.ts
 │   │   ├── clean.prod.ts
-│   │   ├── installers.prod.ts
 │   │   ├── noop.ts
 │   │   ├── scss.dev.ts
 │   │   ├── scss.prod.ts

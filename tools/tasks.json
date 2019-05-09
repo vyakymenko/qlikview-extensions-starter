@@ -21,8 +21,7 @@
     "assets.copy.prod",
     "tslint",
     "ts.build.prod",
-    "scss.prod",
-    "installers.prod"
+    "scss.prod"
   ],
 
   "default": [
