@@ -1,6 +1,6 @@
 {
   "name": "qlikview-extensions-starter-pack",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "QlikView Extensions Developer Starter",
   "devDependencies": {
     "@types/del": "^4.0.0",
@@ -13,7 +13,7 @@
     "@types/run-sequence": "0.0.30",
     "del": "^4.0.0",
     "event-stream": "^4.0.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-cssmin": "^0.2.0",
     "gulp-qar": "^1.0.5",
     "gulp-sass": "^4.0.1",
@@ -22,13 +22,13 @@
     "isstream": "^0.1.2",
     "natives": "^1.1.6",
     "rollup": "^1.0.0",
-    "rollup-plugin-terser": "^4.0.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "run-sequence": "^2.2.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript": "^1.0.1",
     "tildify": "^2.0.0",
     "ts-node": "^8.0.2",
+    "tslib": "^1.9.3",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "typescript": "^3.4.5"
   },
   "repository": {
     "type": "git",

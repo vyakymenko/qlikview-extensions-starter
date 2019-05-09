@@ -10,9 +10,8 @@ import { Config } from '../config';
 
 const typescript = require('rollup-plugin-typescript');
 const terser = require('rollup-plugin-terser').terser;
-const tsconfig = require('../../tsconfig.json');
 
-export = () => {
+export = (done: any) => {
 
   const isDirectory = (source: any) => lstatSync(source).isDirectory();
   const getDirectories = (source: any) =>
@@ -37,17 +36,19 @@ export = () => {
           typescript(
             {
               typescript: require('typescript'),
-              tsconfig: tsconfig
+              tsconfig: '../../'
             }
           ),
           terser()
         ]
       })
         .then((bundle: any) => {
-          return bundle.write({
+          bundle.write({
             file: `${Config.dist.prod}${path.split('src/')[1]}/Script.js`,
             format: 'iife'
           });
+
+          return done();
         });
     });
   return es.merge.apply(tasks);

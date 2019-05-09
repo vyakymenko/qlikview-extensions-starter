@@ -10,7 +10,7 @@
 QlikView Extensions Developer Starter provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
 # Version
-2.1.2
+3.0.0
 
 # How to start
 
