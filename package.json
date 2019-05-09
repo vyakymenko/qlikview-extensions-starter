@@ -3,7 +3,7 @@
   "version": "2.1.2",
   "description": "QlikView Extensions Developer Starter",
   "devDependencies": {
-    "@types/del": "^3.0.1",
+    "@types/del": "^4.0.0",
     "@types/event-stream": "^3.3.34",
     "@types/gulp": "^4.0.5",
     "@types/gulp-sass": "4.0.0",
