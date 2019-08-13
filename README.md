@@ -1,11 +1,9 @@
 # Introduction
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/qlikview-extensions-starter.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://travis-ci.org/vyakymenko/qlikview-extensions-starter.svg?branch=master)](https://travis-ci.org/vyakymenko/qlikview-extensions-starter)
 [![Build status](https://ci.appveyor.com/api/projects/status/scyi6yaqm085yyj6?svg=true)](https://ci.appveyor.com/project/vyakymenko/qlikview-extensions-starter)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![devDependencies Status](https://david-dm.org/vyakymenko/qlikview-extensions-starter/dev-status.svg)](https://david-dm.org/vyakymenko/qlikview-extensions-starter?type=dev)
 
 QlikView Extensions Developer Starter provides fast, reliable and extensible starter for the development of QlikView Document/Object extensions.
 
