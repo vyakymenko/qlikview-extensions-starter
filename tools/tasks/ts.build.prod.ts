@@ -1,17 +1,16 @@
 /**
- * TypeScript Compiling {Development}
- * @task ts.build.prod
+ * TypeScript Compiling {Production}
+ * @task js.build.prod
  */
+const { src, dest } = require('gulp');
+const mergeStream = require('merge-stream');
+import * as gulpEsbuild from 'gulp-esbuild';
 import { lstatSync, readdirSync } from 'fs';
 import { join } from 'path';
-import * as rollup from 'rollup';
-import * as es from 'event-stream';
+
 import { Config } from '../config';
 
-const typescript = require('rollup-plugin-typescript');
-const terser = require('rollup-plugin-terser').terser;
-
-export = (done: any) => {
+export = () => {
 
   const isDirectory = (source: any) => lstatSync(source).isDirectory();
   const getDirectories = (source: any) =>
@@ -30,26 +29,14 @@ export = (done: any) => {
 
       const path = entry.replace(/\\/g, '/');
 
-      return rollup.rollup({
-        input: `${path}/Script.ts`,
-        plugins: [
-          typescript(
-            {
-              typescript: require('typescript'),
-              tsconfig: '../../'
-            }
-          ),
-          terser()
-        ]
-      })
-        .then((bundle: any) => {
-          bundle.write({
-            file: `${Config.dist.prod}${path.split('src/')[1]}/Script.js`,
-            format: 'iife'
-          });
-
-          return done();
-        });
+      return src(`${path}/Script.ts`)
+        .pipe(gulpEsbuild({
+          outfile: `Script.js`,
+          minify: true,
+          format: 'iife'
+        }))
+        .pipe(dest(`${Config.dist.prod}${path.split('src/')[1]}`));
     });
-  return es.merge.apply(tasks);
+
+  return mergeStream(tasks);
 };
