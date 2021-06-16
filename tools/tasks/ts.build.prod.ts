@@ -33,7 +33,8 @@ export = () => {
         .pipe(gulpEsbuild({
           outfile: `Script.js`,
           minify: true,
-          format: 'iife'
+          format: 'iife',
+          bundle: true
         }))
         .pipe(dest(`${Config.dist.prod}${path.split('src/')[1]}`));
     });

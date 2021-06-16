@@ -32,7 +32,8 @@ export = () => {
       return src(`${path}/Script.ts`)
         .pipe(gulpEsbuild({
           outfile: `Script.js`,
-          format: 'iife'
+          format: 'iife',
+          bundle: true
         }))
         .pipe(dest(`${Config.dist.dev}${path.split('src/')[1]}`));
     });
